@@ -1,0 +1,13 @@
+
+<project name="LoginApp" default="run" basedir=".">
+    <description>Builds, tests, and runs the LoginApp project.</description>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes" includeantruntime="false"/>
+    </target>
+
+    <target name="run" depends="compile">
+        <java classname="loginapp.LoginForm" classpath="build/classes"/>
+    </target>
+</project>
